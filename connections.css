@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #b3cdf8;
+  color: #101827;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  padding: 34px 4px;
+}
+
+.sidebar {
+  width: 276px;
+  min-width: 276px;
+  background: #233f6e;
+  color: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 34px;
+  height: calc(100vh - 68px);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 28px;
+}
+
+.brand-symbol {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #c5d5f5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #3065b6;
+  color: #ffffff;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.logout-btn {
+  margin-top: auto;
+  color: #c5d5f5;
+}
+
+.main-content {
+  flex: 1;
+  background: #b3cdf8;
+  border-radius: 0 12px 12px 0;
+  padding: 0 28px 28px;
+  overflow-y: auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e0eafe;
+  padding: 6px 14px 6px 6px;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px #142b5020;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #233f6e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.page-content {
+  padding-top: 8px;
+}
+
+.page-content h1 {
+  font-size: 1.6rem;
+  color: #080d18;
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 280px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background: #e0eafe;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 9px #142b5040;
+  text-align: center;
+}
+
+.summary-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #233f6e;
+}
+
+.summary-label {
+  font-size: 0.85rem;
+  color: #526a8d;
+  margin-top: 4px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  border: 1.5px solid #88a9e5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e0eafe;
+  color: #101827;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #086bff;
+  box-shadow: 0 0 0 3px #086bff20;
+}
+
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.connection-card {
+  background: #e0eafe;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 9px #142b5030;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.conn-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #233f6e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.conn-info {
+  flex: 1;
+}
+
+.conn-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #101827;
+  margin-bottom: 2px;
+}
+
+.conn-email {
+  font-size: 0.8rem;
+  color: #526a8d;
+  margin-bottom: 8px;
+}
+
+.conn-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.skill-chip {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  background: #c5d5f5;
+  color: #254777;
+  border: 1px solid #88a9e5;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #526a8d;
+}
+
+@media (max-width: 750px) {
+  .app-container {
+    display: block;
+    padding: 20px 4px;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: 16px;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .logout-btn {
+    margin-top: 12px;
+    grid-column: 1 / -1;
+  }
+
+  .main-content {
+    border-radius: 12px;
+    padding: 0 16px 16px;
+  }
+
+  .connections-grid {
+    grid-template-columns: 1fr;
+  }
+}
