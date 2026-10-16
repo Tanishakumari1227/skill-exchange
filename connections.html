@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connections – SkillExchange</title>
+  <link rel="stylesheet" href="connections.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-symbol">∞</span>
+        <span class="brand-text">SkillExchange</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item"><span class="nav-icon">▦</span> Dashboard</a>
+        <a href="my-skills.html" class="nav-item"><span class="nav-icon">🎓</span> My Skills</a>
+        <a href="find-people.html" class="nav-item"><span class="nav-icon">♧</span> Find People</a>
+        <a href="exchange-requests.html" class="nav-item"><span class="nav-icon">⇄</span> Exchange Request</a>
+        <a href="connections.html" class="nav-item active"><span class="nav-icon">🔗</span> Connections</a>
+        <a href="sessions.html" class="nav-item"><span class="nav-icon">▣</span> Sessions</a>
+        <a href="profile.html" class="nav-item"><span class="nav-icon">♙</span> Profile</a>
+      </nav>
+      <a href="logout.html" class="nav-item logout-btn"><span class="nav-icon">⏻</span> Logout</a>
+    </aside>
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="user-menu">
+          <div class="user-avatar" id="userAvatar">U</div>
+          <span id="userNameTop">User</span>
+        </div>
+      </header>
+      <div class="page-content">
+        <h1>Connections</h1>
+        <div class="summary-row">
+          <div class="summary-card">
+            <div class="summary-value" id="totalConnections">0</div>
+            <div class="summary-label">Total Connections</div>
+          </div>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search connections..." />
+        </div>
+        <div class="connections-grid" id="connectionsGrid">
+          <div class="loading">Loading connections...</div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="connections.js"></script>
+</body>
+</html>
